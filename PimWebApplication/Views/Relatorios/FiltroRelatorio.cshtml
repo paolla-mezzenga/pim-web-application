@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Gerar Relatório";
+}
+
+<h2 style="color: #347928;">Gerar Relatório</h2>
+
+<form asp-action="GerarRelatorioPDF" method="post" class="mt-4">
+    <div class="form-group">
+        <label for="dataInicio" style="font-weight: bold;">Data Início:</label>
+        <input type="date" id="dataInicio" name="dataInicio" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="dataFim" style="font-weight: bold;">Data Fim:</label>
+        <input type="date" id="dataFim" name="dataFim" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="tipoRelatorio" style="font-weight: bold;">Tipo de Relatório:</label>
+        <select id="tipoRelatorio" name="tipoRelatorio" class="form-control" required>
+            <option value="1">Vendas</option>
+            <option value="2">Produção</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn" style="background-color: #347928; color: white; font-weight: bold; margin-top: 15px;">Gerar Relatório PDF</button>
+    </div>
+</form>

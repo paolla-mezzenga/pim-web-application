@@ -1,0 +1,60 @@
+﻿@model PimWebApplication.Models.Vendas
+
+@{
+    ViewData["Title"] = "Detalhes da Venda";
+}
+
+<h1>Detalhes da Venda</h1>
+
+<div>
+    <h4>Informações da Venda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.NomeProduto)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.NomeProduto)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.DataVenda)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DataVenda)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.QtdVendida)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.QtdVendida)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PrecoUnitario)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PrecoUnitario)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Cliente)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Cliente)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PrecoTotal)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PrecoTotal)
+        </dd>
+    </dl>
+</div>
+
+<div class="btn-group">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>

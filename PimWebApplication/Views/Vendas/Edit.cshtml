@@ -1,0 +1,69 @@
+﻿@model PimWebApplication.Models.Vendas
+
+@{
+    ViewData["Title"] = "Editar Venda";
+}
+
+<h1>Editar Venda</h1>
+
+<h4>Informações da Venda</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="NomeProduto" class="control-label"></label>
+                <input asp-for="NomeProduto" class="form-control" />
+                <span asp-validation-for="NomeProduto" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DataVenda" class="control-label"></label>
+                <input asp-for="DataVenda" class="form-control" />
+                <span asp-validation-for="DataVenda" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="QtdVendida" class="control-label"></label>
+                <input asp-for="QtdVendida" class="form-control" />
+                <span asp-validation-for="QtdVendida" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrecoUnitario" class="control-label"></label>
+                <input asp-for="PrecoUnitario" class="form-control" />
+                <span asp-validation-for="PrecoUnitario" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cliente" class="control-label"></label>
+                <input asp-for="Cliente" class="form-control" />
+                <span asp-validation-for="Cliente" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PrecoTotal" class="control-label"></label>
+                <input asp-for="PrecoTotal" class="form-control" />
+                <span asp-validation-for="PrecoTotal" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="btn-group">
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

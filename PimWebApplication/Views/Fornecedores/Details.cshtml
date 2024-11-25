@@ -1,0 +1,46 @@
+﻿@model PimWebApplication.Models.Fornecedor
+
+@{
+    ViewData["Title"] = "Detalhes do Fornecedor";
+}
+
+<h1 style="color: #347928;">Detalhes do Fornecedor</h1>
+
+<div>
+    <h4>Fornecedor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar</a> |
+    <a asp-action="Index" class="btn btn-secondary">Voltar para a Lista</a>
+</div>
